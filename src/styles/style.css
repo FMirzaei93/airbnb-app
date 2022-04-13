@@ -1,10 +1,13 @@
 * {
   padding: 0;
+  padding-bottom: 5px;
   margin: 0;
   box-sizing: border-box;
+  font-family: Poppins;
 }
 
-/* Navbar */
+/* ----------- Navbar Component ----------- */
+
 div.navbar {
   padding: 10px;
   box-shadow: 0px 5px 10px rgb(185, 185, 185);
@@ -14,21 +17,96 @@ div.navbar img.logo {
   width: 80px;
 }
 
-/* Introduction */
+/* Margin Container(Intro & Card) */
 
-div.Introduction {
-  padding: 30px;
+div.margin-container {
+  margin-left: 30px;
 }
 
-div.Introduction h1 {
-  padding: 80px 0 20px 0;
-}
+/*----------- Intro Component -----------*/
 
-div.grid-holder {
+section.Intro {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+section.Intro img {
+  width: 60vw;
+  align-self: center;
+  padding-top: 30px;
 }
 
-div.grid-holder img {
-  width: 60%;
+section.Intro h1 {
+  padding-top: 50px;
+  font-size: 30px;
+  max-width: 40vw;
+}
+
+section.Intro p {
+  padding-top: 20px;
+  max-width: 40vw;
+}
+
+/*----------- Card Component -----------*/
+
+section.card {
+  margin: 40px 20px 0 0;
+
+  /* For matching its contents and applying height and width*/
+  display: inline-block;
+  width: 150px;
+}
+
+/* Item's Photo Section */
+
+div.item-photo {
+  position: relative;
+}
+
+div.item-photo img {
+  width: 100%;
+  /* img tags always make a gap with other elements, the reason is that img tags are inline-block elements so they act like the words of a sentence. 
+  Here's 3 ways of fixing this issue:*/
+  display: block;
+  /* vertical-align: middle; */
+  /* set its parent's font-size to zero */
+  border-radius: 8px;
+}
+span.sold-status {
+  background-color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  padding: 2px 7px;
+}
+
+/* Info */
+
+div.info {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 5px 0;
+}
+
+div.info > * {
+  font-size: 10px;
+  margin-right: 3px;
+  max-width: 100%;
+}
+
+div.info img {
+  width: 10px;
+}
+
+p.title,
+span.price,
+span.owner-status {
+  font-size: 10px;
+}
+
+span.price {
+  font-weight: bold;
 }
