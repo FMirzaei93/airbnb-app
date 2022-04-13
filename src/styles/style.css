@@ -57,13 +57,13 @@ section.card {
   width: 150px;
 }
 
-/* Item's Photo Section */
+/* Item's Image Section */
 
-div.item-photo {
+div.item-image {
   position: relative;
 }
 
-div.item-photo img {
+div.item-image img {
   width: 100%;
   /* img tags always make a gap with other elements, the reason is that img tags are inline-block elements so they act like the words of a sentence. 
   Here's 3 ways of fixing this issue:*/
@@ -80,6 +80,7 @@ span.sold-status {
   left: 5px;
   font-size: 12px;
   padding: 2px 7px;
+  text-transform: uppercase;
 }
 
 /* Info */
