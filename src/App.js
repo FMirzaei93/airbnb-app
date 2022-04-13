@@ -1,11 +1,17 @@
 import Navbar from "./components/Navbar";
-import Introduction from "./components/Introduction";
+import Intro from "./components/Intro";
+import Card from "./components/Card";
 
 function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Introduction />
+      <div className='margin-container'>
+        <Intro />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }
