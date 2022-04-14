@@ -20,6 +20,6 @@ export default function Card(props) {
       <p className='title'>{props.title}</p>
       <span className='price'>{props.price}</span>
       <span className='owner-status'> {" / "}person</span>
-    </section>.
+    </section>
   );
 }
