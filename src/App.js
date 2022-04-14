@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Card from "./components/Card";
-import image from "./images/katie-zaferes.png";
 
 function App() {
   return (
@@ -10,10 +9,12 @@ function App() {
       <div className='margin-container'>
         <Intro />
         <Card
-          img={Image}
+          // The properties of this component. Like style property of an html tag:
+          // <div style=...  class=... ></div>
+          img='katie-zaferes.png'
           sold_status='sold out'
           ratings='5'
-          ratings_num='6'
+          ratings_num={6}
           location='USA'
           title='Life lesson with Katie'
           price='From $136'
