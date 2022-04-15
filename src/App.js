@@ -1,14 +1,34 @@
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Card from "./components/Card";
+import cardsData from "./cardsData";
 
 function App() {
+  const cardElements = cardsData.map((card) => {
+    return (
+      <Card
+        key={card.id}
+        img={card.coverImg}
+        rating={card.stats.rating}
+        reviewCount={card.stats.reviewCount}
+        location={card.location}
+        description={card.description}
+        price={card.price}
+        openSpots={card.openSpots}
+      />
+    );
+  });
+
+  console.log({ cardElements });
+
   return (
     <div className='App'>
       <Navbar />
       <div className='margin-container'>
         <Intro />
-        <Card
+        {/* Using JS code inside JSX(html inside js) needs curly braces*/}
+        <section className='cards-list'>{cardElements}</section>
+        {/* <Card
           // The properties of this component. Like style property of an html tag:
           // <div style=...  class=... ></div>
           img='katie-zaferes.png'
@@ -27,7 +47,7 @@ function App() {
           location='USA'
           title='Jeans'
           price='From $50'
-        />
+        /> */}
       </div>
     </div>
   );

@@ -48,13 +48,19 @@ section.Intro p {
 }
 
 /*----------- Card Component -----------*/
+section.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
 
-section.card {
-  margin: 40px 20px 0 0;
-
-  /* For matching its contents and applying height and width*/
-  display: inline-block;
+div.card {
   width: 150px;
+  font-size: 10px;
+  flex: 0 0 auto; /* in order for the list items not to grow or shrink when the scrin gets smaller or bigger */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Item's Image Section */
@@ -64,15 +70,19 @@ div.item-image {
 }
 
 div.item-image img {
+  height: 200px;
   width: 100%;
+  background-size: cover;
+
   /* img tags always make a gap with other elements, the reason is that img tags are inline-block elements so they act like the words of a sentence. 
   Here's 3 ways of fixing this issue:*/
   display: block;
   /* vertical-align: middle; */
   /* set its parent's font-size to zero */
+
   border-radius: 8px;
 }
-span.sold-status {
+span.availability {
   background-color: #fff;
   border-radius: 3px;
   position: absolute;
@@ -87,27 +97,13 @@ span.sold-status {
 
 div.info {
   display: flex;
+  gap: 5px;
   align-items: center;
-  max-width: 100%;
-  padding: 5px 0;
-}
-
-div.info > * {
-  font-size: 10px;
-  margin-right: 3px;
-  max-width: 100%;
 }
 
 div.info img {
-  width: 10px;
+  height: 16px;
 }
-
-p.title,
-span.price,
-span.owner-status {
-  font-size: 10px;
-}
-
 span.price {
   font-weight: bold;
 }
