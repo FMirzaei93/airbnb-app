@@ -1,25 +1,26 @@
-import star from "../images/star.png";
-
 export default function Card(props) {
   return (
-    <section className='card'>
+    <div className='card'>
       <div className='item-image'>
-        <img src={`../images/${props.img}`} alt='item-image' />
-        <span className='sold-status'>{props.sold_status}</span>
+        <img src={`/images/${props.img}`} alt='item-image' />
+
+        <span className='availability'>{props.availability}</span>
       </div>
       <div className='info'>
-        <img src={star} alt='star-icon' />
-        <span className='ratings'>{props.rarings}</span>
-        <div className='ratings-num'>
+        <img src={"/images/star.png"} alt='star-icon' />
+        <span>{props.rating}</span>
+        <div>
           <span>(</span>
-          {props.ratings_num}
+          {props.reviewCount}
           <span>).</span>
         </div>
-        <span className='location'>{props.location}</span>
+        <span>{props.location}</span>
       </div>
-      <p className='title'>{props.title}</p>
-      <span className='price'>{props.price}</span>
-      <span className='owner-status'> {" / "}person</span>
-    </section>
+      <p className='description'>{props.description}</p>
+      <div>
+        <span className='price'>{props.price}</span>{" "}
+        <span style={{ fontSize: "10px" }}>{" / "}person</span>
+      </div>
+    </div>
   );
 }
