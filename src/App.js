@@ -8,13 +8,13 @@ function App() {
     return (
       <Card
         key={card.id}
-        img={card.img}
-        sold_status={card.sold_status}
-        ratings={card.ratings}
-        ratings_num={card.ratings_num}
+        img={card.coverImg}
+        rating={card.stats.rating}
+        reviewCount={card.stats.reviewCount}
         location={card.location}
-        title={card.title}
+        description={card.description}
         price={card.price}
+        openSpots={card.openSpots}
       />
     );
   });
@@ -27,7 +27,7 @@ function App() {
       <div className='margin-container'>
         <Intro />
         {/* Using JS code inside JSX(html inside js) needs curly braces*/}
-        {cardElements}
+        <section className='cards-list'>{cardElements}</section>
         {/* <Card
           // The properties of this component. Like style property of an html tag:
           // <div style=...  class=... ></div>
