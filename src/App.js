@@ -4,17 +4,23 @@ import Card from "./components/Card";
 import cardsData from "./cardsData";
 
 function App() {
-  const cardElements = cardsData.map((card) => {
+  const cardElements = cardsData.map((item) => {
     return (
       <Card
-        key={card.id}
-        img={card.coverImg}
-        rating={card.stats.rating}
-        reviewCount={card.stats.reviewCount}
-        location={card.location}
-        description={card.description}
-        price={card.price}
-        openSpots={card.openSpots}
+        key={item.id}
+        item={item} //A substitution for below codes
+        // img={card.coverImg}
+        // rating={card.stats.rating}
+        // reviewCount={card.stats.reviewCount}
+        // location={card.location}
+        // description={card.description}
+        // price={card.price}
+        // openSpots={card.openSpots}
+        //  And in the Card component: props.img and so on.
+
+        //Another way(Spread syntax):
+        //{...item}
+        // And in the Card component: props.img and so on.
       />
     );
   });
