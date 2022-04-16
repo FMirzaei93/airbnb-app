@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It's a simple app for learning purposes, using react in designing a single page website.
 
-## Available Scripts
+## Available Script
 
 In the project directory, you can run:
 
